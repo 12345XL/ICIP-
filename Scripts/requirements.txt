@@ -1,0 +1,14 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0
+torchvision==0.21.0
+faiss-gpu-cu12
+numpy
+pandas
+Pillow
+opencv-python-headless
+scipy
+tqdm
+transformers
+qwen_vl_utils
+scikit-learn
+accelerate

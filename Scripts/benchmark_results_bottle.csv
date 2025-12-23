@@ -1,0 +1,129 @@
+filename,gt_label,pred_no_rag,pred_with_rag,expl_no_rag,expl_with_rag
+good/008.png,0,0,0,"No
+
+The image shows a clean, circular opening of what appears to be a bottle or container. The glass is transparent with a smooth, even surface. There are no visible cracks, chips, scratches, or discolorations. The lighting creates natural reflections along the rim, which is typical for glassware and indicates no defect. The dark interior suggests it may contain a liquid, but this does not constitute a defect. The overall appearance is uniform and intact.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies indicating contamination or breakage; the visual inspection confirms a symmetrical, intact rim consistent with normal manufacturing."
+good/003.png,0,0,0,"No. The image shows a clean, circular opening of a bottle with no visible defects such as cracks, chips, or irregularities in the glass or seal. The lighting creates a natural reflection along the rim, which is typical for glassware and does not indicate a defect. The dark liquid inside appears uniform and contained, with no signs of spillage or contamination.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow regions indicating contamination or breakage, and the visual inspection confirms a clean, symmetrical rim consistent with normal standards."
+good/006.png,0,1,0,"Yes. The image shows a dark, circular opening with a rough, uneven inner rim that appears corroded or damaged, especially noticeable in the coppery-orange discoloration along the edges. This suggests a defect in the product’s finish or integrity.","Answer: No
+Confidence: 0.1
+The heatmap shows scattered, low-intensity color variations that do not correspond to any clear defect pattern or contamination in the bottle’s interior."
+good/000.png,0,0,0,"No. The image shows a clean, uniform circular opening with no visible cracks, chips, or irregularities. The glass appears smooth and the interior is consistent in color and texture, indicating no defect.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant anomaly scores in regions that would indicate contamination, broken edges, or small chips, and the visual inspection confirms the bottle's rim and interior match the normal standard."
+good/014.png,0,0,0,"No
+
+The image shows a clean, circular opening of what appears to be a bottle or container with a dark liquid inside. The glass or plastic surface is smooth, and there are no visible cracks, chips, scratches, or manufacturing defects. The lighting creates natural reflections and highlights along the rim, which is typical for a product photo. No defect is evident upon inspection.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies indicating contamination or breakage, and the original and reference images are visually consistent with normal bottle characteristics."
+good/019.png,0,1,0,"Yes. The image shows a dark liquid inside a bottle, but the inner rim of the bottle's opening appears to have a dark, possibly oxidized or dirty residue, which is inconsistent with a clean, new product. This suggests a defect or contamination.","Answer: No
+Confidence: 0.0
+There are no visible anomalies or deviations from the normal appearance of the bottle's rim or interior in any of the panels."
+good/002.png,0,0,0,"No
+
+The image shows a clean, circular opening of what appears to be a bottle or container. The glass or plastic material is uniform, with no visible cracks, scratches, or discoloration. The liquid inside is dark and consistent, with no signs of sediment or contamination. The lighting creates a natural reflection along the rim, which is typical for such product photography. No defect is evident.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies, and the original and reference images are visually consistent, indicating no contamination or breakage."
+good/018.png,0,1,0,"Yes. The image shows a dark, circular object with visible ring-like imperfections or residue around the inner edge, suggesting contamination or manufacturing defect. The uneven texture and discoloration indicate a flaw.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow regions indicating contamination or breakage; the original and reference images are consistent with normal bottle appearance."
+good/005.png,0,1,0,"Yes. The image shows a dark, circular opening with a thick, uneven rim that appears to have a rough or gritty texture, possibly indicating a manufacturing defect or contamination. The inner surface also seems to have a dull, inconsistent sheen, suggesting imperfections in the material or finish. These visual cues point to a defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variations but no clear, high-probability defect regions consistent with contamination, broken edges, or small chips."
+good/017.png,0,1,0,"Yes. The image shows a dark, circular opening with a noticeable ring of rough, uneven texture around the inner rim, suggesting possible wear, residue, or manufacturing defect. The glossy, reflective outer edge contrasts with the dull, gritty inner ring, indicating inconsistency in surface finish or material integrity. This irregularity is not typical of a pristine product and points to a defect.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal warm-toned anomalies near the rim, consistent with normal manufacturing variation or lighting artifacts, not true contamination or breakage."
+broken_small/008.png,1,1,0,"Yes. The image shows a crack or break in the glass bottle near the rim, which is a defect. The visible fracture line and chipped edges indicate physical damage.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies, and the original image matches the golden reference with no visible cracks, chips, or contamination."
+broken_small/003.png,1,1,0,"Yes. The image shows a dark, possibly glass or plastic bottle opening with visible signs of wear, including a cracked or chipped rim and a rough, uneven texture around the edge. These imperfections suggest a defect in the product’s condition or manufacturing.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm-colored regions that do not correspond to any clear defect in the original or reference images."
+broken_small/006.png,1,1,0,"Yes. There is a visible defect at the top edge of the bottle's opening — a small crack or chip in the glass, with a shiny, broken fragment protruding. This indicates physical damage to the product.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal warm-colored anomalies near the rim, consistent with minor manufacturing variations or lighting effects rather than actual defects."
+broken_small/000.png,1,1,0,"Yes. The image shows a dark, circular opening with visible signs of wear or damage — particularly a noticeable crack or chip along the inner rim, and a rough, uneven texture on the glass surface. These are defects that compromise the integrity or appearance of the product.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal warm-colored anomalies near the rim, consistent with normal manufacturing variations or lighting reflections, not true defects."
+broken_small/014.png,1,1,0,"Yes. The image shows a dark, circular opening with a noticeable ring of discoloration or residue around the inner rim, which appears as a brownish-orange tint. This is inconsistent with a clean, finished product and suggests contamination, oxidation, or manufacturing defect. Additionally, there are small white specks or imperfections visible on the inner surface, further indicating a defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variation but no consistent or high-probability defect regions indicating contamination, breakage, or structural damage."
+broken_small/019.png,1,1,0,"Yes. There is a visible defect in the form of a small, irregularly shaped crack or chip on the inner rim of the bottle’s opening, which is apparent in the close-up view. This imperfection compromises the integrity of the container and may affect its functionality or safety.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variation near the center-left, but no clear, high-anomaly region matches known defect patterns like contamination, broken_large, or broken_small."
+broken_small/002.png,1,1,0,"Yes. There is a noticeable defect: a piece of tape or adhesive residue is stuck to the inner rim of the bottle opening, with visible peeling and uneven edges. This is not part of the intended design and indicates a manufacturing or handling defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm coloration near the rim, which may reflect minor surface variations rather than a true defect."
+broken_small/018.png,1,1,0,"Yes. There is a visible chip or crack on the inner rim of the bottle, particularly on the lower left side, where the glass appears broken and reflects light unevenly. This is a defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal color variation and no clear, high-probability defect regions that align with known contamination or breakage patterns."
+broken_small/005.png,1,1,0,"Yes. There is a visible crack or chip on the inner rim of the bottle, which is a defect.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies, and the original and reference images are visually consistent with normal bottle characteristics."
+broken_small/017.png,1,1,0,"Yes. There is a noticeable defect: a piece of foil or label material is torn or peeled away from the rim of the bottle opening, exposing the inner surface and creating an irregular, damaged edge. This is not a normal or intended appearance.","Answer: No
+Confidence: 0.1
+The heatmap shows a small localized anomaly near the center-left, but it is not consistent with a defect as defined — it appears to be a minor reflection or lighting artifact rather than contamination, breakage, or structural damage."
+broken_large/008.png,1,1,0,"Yes. The image shows a visible crack or chip along the inner rim of the cylindrical object, particularly on the right side, where the surface is broken and uneven. This is a defect.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red regions indicating defects, and the original image and reference image both display a clean, intact rim without visible chips, cracks, or contamination."
+broken_large/003.png,1,1,0,"Yes. The image shows a dark, circular object with visible cracks or fractures along the inner rim, suggesting structural damage or breakage. This is a defect.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow anomalies indicating contamination or breakage, and the visual comparison with the reference image confirms a symmetrical, intact rim."
+broken_large/006.png,1,1,0,"Yes. The image shows a noticeable crack or chip on the rim of the bottle's opening, with a piece of the material broken off and revealing a lighter, possibly metallic or inner layer. This is a clear defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm-colored regions near the rim, which may reflect minor lighting artifacts rather than actual contamination or breakage."
+broken_large/000.png,1,1,0,"Yes. The image shows a broken or cracked seal or cap around the rim of the bottle, with visible damage and debris. This indicates a defect in the product's integrity or packaging.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red anomalies, and the original image and reference image both display a clean, intact bottle rim with no visible defects."
+broken_large/014.png,1,1,0,"Yes. There is a visible crack or chip on the inner rim of the bottle, particularly noticeable on the left side where a reflective, jagged area contrasts with the smooth, dark glass. This indicates a defect in the bottle's integrity.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variations but no clear, high-anomaly regions indicating contamination, breakage, or other defects."
+broken_large/019.png,1,1,0,"Yes. The image shows a cracked or broken seal around the rim of the bottle, with visible fragments of what appears to be adhesive or sealant that are broken and unevenly applied. This indicates a defect in the product's integrity or packaging.","Answer: No
+Confidence: 0.95
+The heatmap shows minor color variations near the rim, but no high-anomaly regions indicating contamination, large breakage, or small chips, and the visual inspection confirms the bottle’s rim is intact and symmetrical."
+broken_large/002.png,1,1,0,"Yes. The image shows a dark, circular object with visible cracks or fractures along its inner rim, indicating physical damage or a defect. The surface appears uneven and broken, which is not typical for a properly manufactured or sealed product.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal warm-colored regions that align with expected lighting reflections and minor surface imperfections, not indicative of contamination or structural damage."
+broken_large/018.png,1,1,0,"Yes. The image shows a broken or torn seal around the rim of the bottle, with visible cracks and debris inside the bottle opening. This indicates a defect in the packaging or container integrity.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variations near the rim, but no consistent or high-probability defect areas matching known contamination or breakage patterns."
+broken_large/005.png,1,1,0,"Yes. The image shows a clear crack or break in the glass rim of the bottle, which is a defect. The fracture is visible as a jagged, broken line along the inner edge of the bottle opening, indicating structural damage.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm-colored regions that do not correspond to any visible defect in the original image or reference, and no clear contamination or breakage is present."
+broken_large/017.png,1,1,0,"Yes. The image shows a clear defect: a significant crack or chip along the inner rim of the cylindrical object, with visible fraying and a shiny, broken edge. This indicates physical damage to the surface, which is a defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm-colored regions near the rim, which may reflect minor surface reflections or noise rather than a true defect."
+contamination/008.png,1,1,0,"Yes. The image shows a dark, circular object with visible smudges, dust, and a small droplet of liquid on its surface, which are defects. These imperfections suggest contamination or poor cleaning, indicating a defect in the product's condition.","Answer: No
+Confidence: 0.95
+The heatmap shows no significant red or yellow regions indicating contamination or breakage, and all images align with normal bottle characteristics."
+contamination/003.png,1,0,0,"No
+
+The image shows a clean, circular opening of what appears to be a bottle or container. The glass is smooth with no visible cracks, chips, or irregularities. The dark liquid inside is uniform, and the reflections on the rim are consistent with normal lighting and surface curvature. There are no signs of contamination, deformation, or manufacturing defects. The overall appearance is pristine and functional.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal warm-colored regions near the rim, which are likely artifacts or noise rather than actual defects."
+contamination/006.png,1,1,0,"Yes. The image shows a bottle with a visible ring of coppery or brownish discoloration along the inner rim of the bottle opening, which is inconsistent with a clean, factory-finished product. This discoloration suggests possible contamination, oxidation, or manufacturing defect. The center of the bottle appears cloudy or murky, which may indicate a liquid residue or sediment that is not typical for a clean, sealed bottle. These visual cues point to a defect.","Answer: No
+Confidence: 0.1
+The heatmap shows minor color variation but no clear, high-anomaly regions indicating contamination, breakage, or other defects."
+contamination/000.png,1,1,0,"Yes. There is a visible white, textured substance inside the dark liquid, which appears to be a foreign object or residue. This is not part of the product and indicates a defect.","Answer: No
+Confidence: 0.95
+The left panel shows a minor, non-uniform reflection inside the bottle opening, which aligns with normal manufacturing variation and does not match the defined defect patterns."
+contamination/014.png,1,1,0,"Yes. The image shows a visible crack or fissure running down the center of the bottle’s opening, which is a defect. This imperfection compromises the structural integrity and may indicate a manufacturing flaw or damage.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal anomaly scores with no significant red or yellow regions indicating contamination or breakage."
+contamination/019.png,1,1,0,"Yes. The image shows a dark liquid inside a bottle, but there is a visible, irregularly shaped, shiny, and possibly broken or cracked area on the inner rim of the bottle. This suggests a defect in the bottle’s integrity or finish.","Answer: No
+Confidence: 0.95
+The heatmap shows minimal anomaly scores with no significant red or yellow regions indicating contamination, breakage, or structural defects."
+contamination/002.png,1,1,0,"Yes. There is a visible defect: a small, circular, white or light-colored spot or residue inside the dark liquid, which appears to be a foreign object or contamination. Additionally, there are irregular orange-brown reflections or discolorations along the inner rim of the bottle, suggesting possible staining, residue, or imperfections in the glass or seal.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal color variation and no concentrated red regions indicating contamination or breakage."
+contamination/018.png,1,1,0,"Yes. The image shows a bottle with a thin, metallic wire or string protruding from the inside of the neck, which is not a normal or intended part of the product. This could indicate a defect, such as a manufacturing error or contamination, and it may pose a safety hazard or indicate improper handling.","Answer: No
+Confidence: 0.95
+The anomaly heatmap shows minimal warm-toned regions near the rim, consistent with normal manufacturing variations and not indicative of contamination, breakage, or structural defects."
+contamination/005.png,1,1,0,"Yes. The image shows a dark liquid in a bottle with a small, irregularly shaped, possibly organic or debris-like object floating inside, which is not part of the intended product. This suggests a defect or contamination.","Answer: No
+Confidence: 0.95
+The anomaly heatmap highlights a small, irregularly shaped lighter patch near the center, consistent with minor contamination rather than a structural defect."
+contamination/017.png,1,1,0,"Yes. The image shows a dark, possibly liquid substance inside a container with a black, fibrous or string-like object protruding from the opening. This object appears to be a wick or a piece of material that is not part of the product’s intended design or function — suggesting a defect or improper assembly. Additionally, the container’s rim shows signs of wear or residue, which may indicate damage or contamination.","Answer: No
+Confidence: 0.1
+The heatmap shows minimal color variation near the top-left rim, which is likely noise or minor reflection artifacts, not a true defect."
