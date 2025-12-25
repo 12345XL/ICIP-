@@ -66,6 +66,8 @@ def find_latest_run_dir(tag: str, category: str) -> Optional[str]:
 
 
 def main() -> None:
+
+
     """小白解释：这是只负责“DINO 推理 + AUROC 评估”的一键脚本，不会跑 Qwen；它会遍历所有类别，对每个类别生成一个 run 并计算 metrics.json。"""
     import sys
     sys.path.append(SCRIPTS_DIR)

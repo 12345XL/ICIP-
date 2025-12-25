@@ -32,7 +32,10 @@ from utils.paths import (
     category_dir,
 )
 
-STRIDE_RATIO = 0.5
+STRIDE_RATIO = float(os.environ.get("STRIDE_RATIO", "0.5"))
+HEATMAP_SIGMA = float(os.environ.get("HEATMAP_SIGMA", "4"))
+SCORE_MODE = os.environ.get("SCORE_MODE", "1nn").strip().lower()
+TRIM_M = int(os.environ.get("TRIM_M", "2"))
 TOPK = 5
 
 class DINOInference:
@@ -42,8 +45,12 @@ class DINOInference:
         self.run_dir = run_dir
         self.extractor = FeatureExtractor(device=self.device)
         self.input_size = self.extractor.input_size
-        self.stride = int(self.input_size * STRIDE_RATIO)
+        self.stride_ratio = STRIDE_RATIO
+        self.stride = int(self.input_size * self.stride_ratio)
         self.topk = TOPK
+        self.heatmap_sigma = HEATMAP_SIGMA
+        self.score_mode = SCORE_MODE
+        self.trim_m = TRIM_M
         backbone = "dinov2"
         env_index_id = os.environ.get("INDEX_ID")
         if env_index_id:
@@ -115,23 +122,30 @@ class DINOInference:
         feats_np = self.extractor.encode(patches)
 
         K = self.topk
-        S, I = self.patch_index.search(feats_np, K)
+        D, I = self.patch_index.search(feats_np, K)
         
         anomaly_map = np.zeros((h, w), dtype=np.float32)
         count_map = np.zeros((h, w), dtype=np.float32)
         
         for i, (x, y) in enumerate(coords):
-            sims = S[i]
-            dists = 1.0 - sims
-            patch_score = float(np.mean(dists))
+            if self.score_mode == "1nn":
+                patch_score = float(D[i, 0])
+            elif self.score_mode == "topk_mean":
+                patch_score = float(np.mean(D[i, :K]))
+            elif self.score_mode == "trimmed_mean":
+                m = min(max(1, self.trim_m), K)
+                patch_score = float(np.mean(np.sort(D[i, :K])[:m]))
+            else:
+                raise ValueError(f"Unknown SCORE_MODE={self.score_mode}")
             anomaly_map[y:y+self.input_size, x:x+self.input_size] += patch_score
             count_map[y:y+self.input_size, x:x+self.input_size] += 1
             
         count_map[count_map == 0] = 1
         anomaly_map /= count_map
         
-        # 高斯平滑
-        anomaly_map = gaussian_filter(anomaly_map, sigma=4)
+        # 高斯平滑（可控）：sigma<=0 时不平滑
+        if self.heatmap_sigma > 0:
+            anomaly_map = gaussian_filter(anomaly_map, sigma=self.heatmap_sigma)
         
         return anomaly_map, feats_np
 
@@ -261,8 +275,9 @@ if __name__ == "__main__":
         "input_size": engine.input_size,
         "stride": engine.stride,
         "topk": engine.topk,
-        "score_mode": "mean(1-sim_topk)",
-        "heatmap_sigma": 4,
+        "stride_ratio": engine.stride_ratio,
+        "score_mode": engine.score_mode,
+        "heatmap_sigma": engine.heatmap_sigma,
         "dataset": "MVTec-AD",
     }
     save_run_config(run_dir, cfg)

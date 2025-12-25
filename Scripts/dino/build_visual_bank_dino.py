@@ -105,11 +105,11 @@ class DINOVisualBankBuilder:
             global_index_path = os.path.join(cat_dir, "global.index")
             meta_path = os.path.join(cat_dir, "meta.pkl")
             p_emb = np.concatenate(patch_features, axis=0)
-            p_index = faiss.IndexFlatIP(p_emb.shape[1])
+            p_index = faiss.IndexFlatL2(p_emb.shape[1])
             p_index.add(p_emb)
             faiss.write_index(p_index, patch_index_path)
             g_emb = np.concatenate(global_features, axis=0)
-            g_index = faiss.IndexFlatIP(g_emb.shape[1])
+            g_index = faiss.IndexFlatL2(g_emb.shape[1])
             g_index.add(g_emb)
             faiss.write_index(g_index, global_index_path)
             with open(meta_path, 'wb') as f:
@@ -118,6 +118,16 @@ class DINOVisualBankBuilder:
 
 if __name__ == "__main__":
     builder = DINOVisualBankBuilder()
-    categories = sorted([d for d in os.listdir(DATASET_ROOT) if os.path.isdir(os.path.join(DATASET_ROOT, d))])
+    env_cats = os.environ.get("TARGET_CATEGORIES", "").strip()
+    if env_cats:
+        categories = [c.strip() for c in env_cats.split(",") if c.strip()]
+    else:
+        categories = sorted(
+            [
+                d
+                for d in os.listdir(DATASET_ROOT)
+                if os.path.isdir(os.path.join(DATASET_ROOT, d))
+            ]
+        )
     for cat in categories:
         builder.process_category(cat)
